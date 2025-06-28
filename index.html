@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Сонирхолтой Асуулт</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			Намайг уншиж чадаж байна уу?<br />
+			Уншиж чадаж байвал 2лаа анх болзоонд явсан өдрийг санаж байна уу?<br />
+			<span class="comments">2025 оны 3 сарын 30 </span><br />
+			Тэр Өдрөөс Хойш Цаг Хугацаа Зогссон Мэт<br />
+			<span class="comments"> Чиний Царай, Чиний Хоолой, Чинийх Гэсэн Бүх Юм.</span><br />
+			Толгойноос минь чи гарахаа больж, үргэлж бодогдох болсон<br />
+			Цаг хугацаа өнгөрөх тусам<br />
+			Чиний өөртөө хадгалсан улам олон зүйлсийг мэддэг болж<br />
+			Нэг л мэдхэд таньд би өөрийн ч мэдэлгүй дасаж<br />
+			Чамайг байхгүй ертөнцийг төсөөлөхийн аргагүй болсон байна<br />
+			2ланд чинь муудалцаж бие биенээ гомдоосон хором мөчүүд цөөнгүй байгаа<br />
+			<span class="comments">Ирээдүйд илүү их байж магадгүй ч</span><br />
+			Таныг гэх миний сэтгэл хэзээ ч унтран алга болохгүй<br />
+			<br>
+			<br>
+			Би чамаас нэг зүйл дээрээс хойш асуумаар байсан юм<br />
+			ЧИ МИНИЙ НАЙЗ ОХИН БОЛООЧ<br />
+			<br>
+			<br>
+			Хэрвээ та зөвшөөрч байгаа бол доор байгаа зүрхэн дээр дараарай<br />
+			<br>
+			<span id="heartspan">
+			<a href="casal-dudu.gif"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Баттулга Хулан
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					МИНИЙХ БОЛООЧ<br/>
+					<div class="signature">- БАТТУЛГА</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+var together = new Date(2025, 2, 30, 0, 0, 0); 
+// 🗓️ March = 2 (months are zero-based in JS)
+
+timeElapse(together);
+setInterval(function () {
+    timeElapse(together);
+}, 1000);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
